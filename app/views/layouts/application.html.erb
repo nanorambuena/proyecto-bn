@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProyectoBn</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Prueba</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<div class="container">
+		<div class="row">
+			<%= link_to root_path do %>
+			<%= image_tag("logo_bn.jpg") %>
+			<% end %>
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+		</div>
+		<div class="row">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Quiénes Somos</a></li>
+						<li><a href="#">Servicios</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Colecciones<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">DD</a></li>                   
+							</ul>
+						</li>
+						<li><a href="#">Catálogo</a></li>
+						<li><a href="#">Biblioteca Nacional Digital</a></li>
+					</ul>
+					<div class="col-sm-3 col-md-3 pull-right">
+						<div class="input-group">
+							<%= form_tag(welcome_resultados_path, :method => "get", id: "search-form", class: "navbar-form") do %>
+
+							<%= text_field_tag :search, params[:search], placeholder: "Buscar", class:"form-control", name:"busqueda" %>
+							<div class="input-group-btn">
+								<%= button_tag(type: "sumbit", class: "btn btn-default") do %>
+								<i class="glyphicon glyphicon-search"></i>
+								<% end %>
+							</div>
+
+							<% end %>
+						</div>	
+					</div>        
+				</div>
+			</nav>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group">
+					<a href="#" class="list-group-item">Cartelera</a>
+					<a href="#" class="list-group-item">Galerías</a>
+					<a href="#" class="list-group-item">Noticias</a>
+					<a href="#" class="list-group-item">Publicaciones</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+			
+				<%= yield %>
+
+			</div>
+		</div>
+		<div class="row panel-footer">Panel footer</div>
+	</div>
 
 </body>
 </html>

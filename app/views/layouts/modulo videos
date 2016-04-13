@@ -1,0 +1,13 @@
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<div class="embed-responsive embed-responsive-16by9"><iframe width="300" height="150" class="embed-responsive-item" src="//www.youtube.com/embed/KpllAjxOIUU"></iframe></div>
+</div>
+<div class="col-sm-4">
+<div class="embed-responsive embed-responsive-16by9"><iframe width="300" height="150" class="embed-responsive-item" src="//www.youtube.com/embed/KpllAjxOIUU"></iframe></div>
+</div>
+<div class="col-sm-4">
+<div class="embed-responsive embed-responsive-16by9"><iframe width="300" height="150" class="embed-responsive-item" src="//www.youtube.com/embed/KpllAjxOIUU"></iframe></div>
+</div>
+</div>
+</div>

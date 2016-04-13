@@ -1,0 +1,14 @@
+<h2>Resultados de búsqueda por "<%= @busqueda %>"</h2>
+
+<h3>ARPA</h3>
+<% @resCultores.each do |res| %>
+	<%= link_to(res[0], res[1], method: :delete) %>
+<% end %>
+<h3>Memoria Chilena</h3>
+<% @resMemoria.each do |res| %>
+	<%= link_to(res[0], res[1], method: :delete) %>
+<% end %>
+<h3>Biblioteca Nacional</h3>
+<% @resBN.each do |res| %>
+	<%= link_to(res[0], res[1], method: :delete) %>
+<% end %>
